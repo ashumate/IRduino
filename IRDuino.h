@@ -26,6 +26,8 @@
 
 #include <Arduino.h>
 #include <IRDuinoRecv.h>
+//Include Keyboard.h to fix compile errors
+#include <Keyboard.h>
 
 #define MAX_IR_CODE     50
 
@@ -69,6 +71,12 @@
 */
 
 #define KEY_SPACE           32
+
+
+// B1 below collids with the value from binary.h
+#ifdef B1
+#	undef B1
+#endif
 
 #define R1                  A0
 #define G1                  A1
