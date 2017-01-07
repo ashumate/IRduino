@@ -116,6 +116,8 @@ bool IRduino::addItem(int irCode, void (*pfun)())
 {
     ir_code[num_code]    = irCode;
     task_fun[num_code++] = pfun;
+      // FIXME: undocumented symantics... asumming returning true means successful add
+    return true;
 }
 
 /* process */
